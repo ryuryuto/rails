@@ -27,12 +27,26 @@ export ALL_PROXY=http://127.0.0.1:1087
 ```
 
 ### ubuntu
-1. 首先安装代理[Qv2ray](https://qv2ray.github.io/) 并根据文档配置好环境，确保使用代理  
+1. 首先安装代理[Qv2ray](https://qv2ray.github.io/) 并根据文档配置好环境，确保使用代理 
+* 可以使用appimage也可以通过deb
+* install deb:
+```shell
+sudo apt install ./deb文件名
+```
+* uninstall deb:
+```shell
+sudo apt remove qv2ray
+```
+之后不再使用的依赖可以通过autoremove删除
+```shell
+sudo apt autoremove 
+```
+   
 2. 参考官方文档安装[rbenv](https://github.com/rbenv/rbenv#basic-github-checkout)和[ruby-build](https://github.com/rbenv/ruby-build#ruby-build)
    注意：没有ruby-build,rbenv缺少install命令
 3. 安装ruby
 4. 安装rails
-5. 安装yarn
+5. 安装[yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 6. rails new，这个时候很可能出错：
 > sqlite3 can't compile
 
