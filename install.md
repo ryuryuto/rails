@@ -1,14 +1,14 @@
 # 安装步骤
 ## Mac OS
 
-1. 必不可少的是配置代理，在shell的配置文件中配置代理，例如以zsh为例，添加到 **`.zshrc`** 中     
+1. 必要步骤是配置代理，在当前shell的配置文件中配置，以**zsh**为例，以下添加到 **`.zshrc`** 中     
 
 ```shell script
 export http_proxy=http://127.0.0.1:1087
 export HTTP_PROXY=$http_proxy
 ```  
 
-2. 针对homebrew 等添加ALL_PROXY代理   
+2. 针对homebrew等添加ALL_PROXY代理   
 ```shell script
 export ALL_PROXY=http://127.0.0.1:1087
 ```
@@ -25,7 +25,7 @@ rbenv 直接install会失败,可能是brew版本的rbenv的bug？
  RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1 --with-readline-dir=$(brew --prefix readline)" rbenv install -v 2.6.3
 ```
 
-5. 通过gem安装rails，直接无法安装，需要通过代理,已经添加了全局代理，可省略后边的参数  
+5. 通过gem安装rails，已经添加了全局代理，可省略后边的参数  
 
 ```shell script
 gem install rails -v 6.0.2.1 --http-proxy=ip:port
